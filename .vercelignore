@@ -1,0 +1,10 @@
+bridge/
+data/
+docs/
+tests/
+server.py
+.env.example
+*.py
+__pycache__/
+.pytest_cache/
+

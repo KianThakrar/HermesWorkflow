@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Hermes Manager" />
+    <title>Hermes Manager</title>
+    <link rel="stylesheet" href="./styles.css?v=20260922-hosted" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <main class="workspace">
+        <header class="top-shell">
+          <div class="brand-row">
+            <div>
+              <h1>Hermes Manager</h1>
+            </div>
+          </div>
+
+          <nav class="top-tabs" aria-label="Workspace views">
+            <button class="top-tab is-active" type="button" data-tab-target="dealflow">Kanban</button>
+            <button class="top-tab" type="button" data-tab-target="agents">Agent Management</button>
+            <button class="top-tab" type="button" data-tab-target="reports">Reports</button>
+            <button class="top-tab" type="button" data-tab-target="overview">Information Overview</button>
+            <button class="top-tab" type="button" data-tab-target="setup">Setup</button>
+          </nav>
+
+          <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to light mode">Light mode</button>
+        </header>
+
+        <section id="dealflowPanel" class="tab-panel is-active" data-tab-panel="dealflow" aria-label="Kanban board">
+          <div class="panel-heading">
+            <div>
+              <p class="section-kicker">Workflow</p>
+              <h2>Kanban</h2>
+            </div>
+            <div class="filters">
+              <label>
+                <span>Search</span>
+                <input id="searchInput" type="search" list="searchSuggestions" placeholder="Company, sender, note, action" />
+              </label>
+              <label>
+                <span>Priority</span>
+                <select id="urgencyFilter">
+                  <option value="all">All</option>
+                  <option value="critical">Critical</option>
+                  <option value="high">High</option>
+                  <option value="medium">Medium</option>
+                  <option value="low">Low</option>
+                </select>
+              </label>
+              <label>
+                <span>Source</span>
+                <select id="streamFilter">
+                  <option value="all">All</option>
+                  <option value="vault">Obsidian</option>
+                  <option value="hermes">Hermes</option>
+                  <option value="task">Tasks</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <datalist id="searchSuggestions"></datalist>
+
+          <form id="taskForm" class="task-form" aria-label="Add task">
+            <input name="title" type="text" placeholder="Add task" required />
+            <input name="owner" type="text" placeholder="Owner" />
+            <select name="priority" aria-label="Priority">
+              <option value="medium">Medium</option>
+              <option value="critical">Critical</option>
+              <option value="high">High</option>
+              <option value="low">Low</option>
+            </select>
+            <input name="dueDate" type="date" />
+            <input name="summary" type="text" placeholder="Note" />
+            <button class="button primary" type="submit">Add</button>
+          </form>
+
+          <div id="boardView" class="board-view" aria-label="Kanban board"></div>
+        </section>
+
+        <section id="agentsPanel" class="tab-panel" data-tab-panel="agents" aria-label="Agent management">
+          <div id="agentManagementContent"></div>
+        </section>
+        <section id="overviewPanel" class="tab-panel" data-tab-panel="overview" aria-label="Information overview"></section>
+        <section id="reportsPanel" class="tab-panel" data-tab-panel="reports" aria-label="Reports"></section>
+        <section id="setupPanel" class="tab-panel" data-tab-panel="setup" aria-label="Setup"></section>
+      </main>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script type="module" src="./app.js?v=20260922-hosted"></script>
+  </body>
+</html>

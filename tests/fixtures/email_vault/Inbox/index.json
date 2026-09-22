@@ -1,0 +1,6 @@
+[
+  {"id":"E101","thread":"NORTHSTAR","date":"2026-09-16T07:10:00+01:00","sender":"Ava Stone <ava@adviser.example>","subject":"Northstar: recurring revenue opportunity","preview":"A profitable software business is considering a majority sale.","file":"Inbox/E101.md"},
+  {"id":"E102","thread":"MERIDIAN-CASH","date":"2026-09-16T07:20:00+01:00","sender":"James Clarke <james@alderbridge.example>","subject":"Urgent: Meridian liquidity review","preview":"A forecast cash shortfall needs review today.","file":"Inbox/E102.md"},
+  {"id":"E103","thread":"NORTHSTAR","date":"2026-09-16T07:35:00+01:00","sender":"Ava Stone <ava@adviser.example>","subject":"Re: Northstar: updated timetable","preview":"The indicative offer deadline has moved to Friday.","file":"Inbox/E103.md"},
+  {"id":"E104","thread":"NEWSLETTER","date":"2026-09-16T07:45:00+01:00","sender":"Market Digest <daily@news.example>","subject":"Weekly markets digest","preview":"General market commentary; no response is required.","file":"Inbox/E104.md"}
+]
