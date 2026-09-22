@@ -1,0 +1,35 @@
+name: Feature proposal
+description: Propose a user outcome before choosing an implementation.
+title: "[Feature] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: User problem
+      description: Who is affected, and what cannot they do reliably today?
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: Describe observable success without prescribing architecture.
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Privacy and operational constraints
+      description: Note local-only data, human approval, audit, or financial-workflow requirements.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+    validations:
+      required: true
+  - type: textarea
+    id: exclusions
+    attributes:
+      label: Explicitly out of scope

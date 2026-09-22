@@ -1,0 +1,63 @@
+name: Agent task
+description: A bounded implementation task ready for one coding agent.
+title: "[Agent] "
+body:
+  - type: input
+    id: backlog-id
+    attributes:
+      label: Backlog ID
+      description: Use the matching ID from docs/backlog.md when one exists.
+      placeholder: P1-006
+    validations:
+      required: true
+  - type: dropdown
+    id: lane
+    attributes:
+      label: Ownership lane
+      options:
+        - Frontend experience
+        - Browser and API transport
+        - Hermes runtime
+        - Obsidian and reporting
+        - Quality, deployment, and documentation
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Required outcome
+      description: State observable behavior, not an implementation preference.
+    validations:
+      required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: Expected files and boundaries
+      description: List files this task may change and any files it must not change.
+    validations:
+      required: true
+  - type: textarea
+    id: contracts
+    attributes:
+      label: Contracts and dependencies
+      description: Record API shapes, storage formats, prerequisite issues, and downstream consumers.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Provide a checkable list, including failure and empty states.
+      placeholder: |
+        - [ ] Expected behavior works
+        - [ ] Failure state is clear
+        - [ ] Tests cover the changed contract
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification plan
+      description: Name unit, integration, browser, privacy, or live opt-in checks required.
+    validations:
+      required: true

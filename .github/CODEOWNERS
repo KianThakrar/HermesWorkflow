@@ -1,0 +1,9 @@
+# A single maintainer owns final review today. Functional ownership lanes are
+# documented in docs/ownership.md and can be assigned to teams as they form.
+* @KianThakrar
+
+/.github/ @KianThakrar
+/assets/ @KianThakrar
+/bridge/ @KianThakrar
+/docs/ @KianThakrar
+/tests/ @KianThakrar

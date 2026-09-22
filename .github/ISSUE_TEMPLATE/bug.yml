@@ -1,0 +1,46 @@
+name: Bug report
+description: Report reproducible incorrect behavior without including private client data.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: Do not paste email content, vault paths, tokens, credentials, or client-identifying information.
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Use synthetic data where data is needed.
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Affected surface
+      options:
+        - Kanban
+        - Agent Management
+        - Reports
+        - Information Overview
+        - Setup and local bridge
+        - Obsidian persistence
+        - Scheduler
+        - Deployment
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitized evidence
+      description: Add screenshots or logs only after removing sensitive information.

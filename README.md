@@ -57,3 +57,7 @@ Run `python3 -m unittest discover -s tests -v` for the isolated test suite. Live
 The frontend is split into `assets/js/config.js`, `api.js`, `state.js`, `modal.js`, and view modules under `assets/js/views/`. The Python bridge is organized into small modules under `bridge/` for configuration, storage, Hermes access, Obsidian access, state assembly, and HTTP handling.
 
 See [docs/hermes-bridge.md](./docs/hermes-bridge.md) for the integration contract and contributor notes.
+
+## Contributing
+
+Start with [CONTRIBUTING.md](./CONTRIBUTING.md), the functional ownership map in [docs/ownership.md](./docs/ownership.md), and the prioritized [docs/backlog.md](./docs/backlog.md). Coding agents also follow [AGENTS.md](./AGENTS.md). Pull requests run isolated Python tests, JavaScript syntax checks, compilation, and repository privacy validation.
